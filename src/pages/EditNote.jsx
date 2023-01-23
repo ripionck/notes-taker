@@ -36,6 +36,7 @@ export const EditNote = ({ notes, setNotes }) => {
       const newNotes = notes.filter((item) => item.id === id);
 
       setNotes(newNotes);
+      //redirect to home page
       navigate("/");
     }
   };
@@ -45,10 +46,10 @@ export const EditNote = ({ notes, setNotes }) => {
       <header className="create-note__header">
         <Link to="/" className="btn">
           <IoIosArrowBack />
-          <button className="btn lg primary" onClick={handleForm}>
-            Save
-          </button>
         </Link>
+        <button className="btn lg primary" onClick={handleForm}>
+          Save
+        </button>
         <button className="btn danger" onClick={handleDelete}>
           <RiDeleteBin6Line />
         </button>
